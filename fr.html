@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit sourcing gratuit – Trident Trust</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e1a2b;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .lang-switch a {
+      color: gold;
+      margin-left: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: gold;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #0e1a2b;
+      background-color: gold;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .form {
+      margin-top: 40px;
+      text-align: left;
+      background-color: #14233b;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .form input, .form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .form button {
+      background-color: gold;
+      color: #0e1a2b;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <a href="index.html">EN</a> | <a href="fr.html">FR</a>
+    </div>
+    <div class="logo">Trident Trust</div>
+    <h1>Demandez votre audit sourcing GRATUIT</h1>
+    <p>Vous souhaitez importer de Chine mais ne savez pas par où commencer ?<br>
+    Nous vous aidons gratuitement avec un audit personnalisé de votre stratégie d'approvisionnement.</p>
+    <a href="#form" class="cta-button">Recevoir mon audit gratuit</a>
+
+    <div class="form" id="form">
+      <h2 style="color: gold;">Demander votre audit</h2>
+      <form action="https://formspree.io/f/mgegbbpq" method="POST" target="_blank">
+        <input type="text" name="name" placeholder="Votre nom complet" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <input type="text" name="company" placeholder="Votre marque ou entreprise">
+        <textarea name="message" rows="5" placeholder="Expliquez vos difficultés actuelles avec le sourcing..."></textarea>
+        <input type="hidden" name="_redirect" value="https://edouwave.github.io/Trident-Trust-/thanks.html">
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+      <br>
+      <a href="https://wa.me/85244287784" class="cta-button" style="background-color: #25D366; color: white;" target="_blank">Discuter sur WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
