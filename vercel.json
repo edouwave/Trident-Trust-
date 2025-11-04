@@ -1,6 +1,5 @@
 {
-  "version": 2,
-  "functions": { "api/*.js": { "runtime": "nodejs20.x" } },
+  "functions": { "api/**": { "runtime": "nodejs20.x" } },
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/legal", "dest": "/legal/index.html" },
