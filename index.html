@@ -1,147 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='fr'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Sourcing Audit – Trident Trust</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0e1a2b;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .lang-switch {
-      text-align: right;
-      margin-bottom: 10px;
-    }
-    .lang-switch a {
-      color: gold;
-      margin-left: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .logo {
-      margin-bottom: 20px;
-    }
-    .logo img {
-      max-width: 180px;
-      height: auto;
-      margin-top: 10px;
-}
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 18px;
-      color: #0e1a2b;
-      background-color: gold;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .form {
-      margin-top: 40px;
-      text-align: left;
-      background-color: #14233b;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    .form input, .form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    .form button {
-      background-color: gold;
-      color: #0e1a2b;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .success-message {
-      display: none;
-      background-color: #28a745;
-      color: white;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-    }
-  </style>
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const data = new FormData(form);
-
-      fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          document.getElementById('success-message').style.display = 'block';
-          form.reset();
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      });
-    }
-  </script>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <title>Trident Trust — Sourcing & Trade (HK ⇄ Paris)</title>
+  <meta name='description' content='Sourcing fiable, OEM/ODM, QC, logistique & Free Sourcing Audit.'/>
+  <link rel='icon' href='/assets/favicon.svg'/>
+  <link rel='stylesheet' href='/style.css'/>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
 </head>
 <body>
-  <div class="container">
-    <div class="lang-switch">
-      <a href="index.html">EN</a> | <a href="fr.html">FR</a>
-    </div>
-    <div class="logo">
-   <img src="https://edouwave.github.io/Trident-Trust-/assets/logo-gold-trident.png" alt="Trident Trust Logo">
-    </div>
-    <h1>Claim Your FREE Sourcing Audit</h1>
-    <p>Want to import from China but not sure where to start? Let us help you for free.<br>
-    Get a personalized audit of your sourcing strategy from a local team based in Hong Kong.</p>
-    <a href="#form" class="cta-button">Get My Free Audit</a>
-
-    <div class="form" id="form">
-      <h2 style="color: gold;">Request Your Free Audit</h2>
-      <form action="https://formspree.io/f/xrbqwnad" method="POST" onsubmit="handleSubmit(event)">
-        <input type="text" name="name" placeholder="Your Full Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="company" placeholder="Your Brand or Store Name">
-        <textarea name="message" rows="5" placeholder="Tell us about your current sourcing challenges..."></textarea>
-        <button type="submit">Submit Request</button>
-      </form>
-      <div id="success-message" class="success-message">✅ Your request has been sent successfully!</div>
-      <br>
-      <a href="https://wa.me/85244287784" class="cta-button" style="background-color: #25D366; color: white;" target="_blank">Chat on WhatsApp</a>
+  <div class='nav'>
+    <div class='container' style='display:flex;align-items:center;height:64px;justify-content:space-between;'>
+      <a href='#' style='display:flex;gap:10px;align-items:center'>
+        <img src='/assets/logo-trident.svg' alt='Trident Trust' width='160'/>
+      </a>
+      <div style='display:flex;gap:18px;align-items:center'>
+        <a href='#services' data-i='nav_services'>Services</a>
+        <a href='#audit' data-i='nav_audit'>Audit</a>
+        <a href='#about' data-i='nav_about'>Qui sommes-nous</a>
+        <a href='#faq' data-i='nav_faq'>FAQ</a>
+        <button id='lang' class='btn' style='padding:8px 12px;'>FR / EN</button>
+      </div>
     </div>
   </div>
+
+  <section class='hero'>
+    <div class='container'>
+      <span class='badge' data-i='badge'>HK ⇄ Paris</span>
+      <h1 style='margin:12px 0 8px;font-size:40px;line-height:1.1' data-i='hero_title'>Sourcing & Trade premium entre Hong Kong et Paris</h1>
+      <p style='opacity:.95;max-width:760px' data-i='hero_sub'>Du brief à la livraison : OEM/ODM, contrôle qualité, logistique, conformité CE/UKCA. Recevez un <b>audit gratuit</b>.</p>
+      <div style='margin-top:18px;display:flex;gap:12px;flex-wrap:wrap'>
+        <a class='btn' href='#audit' data-i='cta_audit'>Démarrer l’audit</a>
+      </div>
+    </div>
+  </section>
+
+  <section id='services' style='padding:60px 0'>
+    <div class='container'>
+      <h2 style='font-size:26px;margin-bottom:14px' data-i='services_title'>Nos services</h2>
+      <div class='grid grid-3'>
+        <div class='card'><h3 data-i='s1_t'>Sourcing & négociation</h3><p data-i='s1_d'>Multi‑fournisseurs, RFPs, échantillons, prix optimisés.</p></div>
+        <div class='card'><h3 data-i='s2_t'>Qualité & conformité</h3><p data-i='s2_d'>QC, audits d’usine, CE/UKCA, PI.</p></div>
+        <div class='card'><h3 data-i='s3_t'>Logistique & douane</h3><p data-i='s3_d'>Express/Air/Mer, Incoterms, EORI & TVA.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id='audit' style='padding:10px 0 60px'>
+    <div class='container'>
+      <div class='card'>
+        <h2 style='font-size:26px;margin-bottom:4px' data-i='audit_title'>Free Sourcing Audit</h2>
+        <p style='opacity:.9' data-i='audit_sub'>Décrivez votre besoin d’achat/sourcing et recevez une analyse par email.</p>
+        <form id='auditForm' class='grid' style='margin-top:16px'>
+          <div class='grid grid-2'>
+            <input name='name' placeholder='Nom / Société' required/>
+            <input name='email' type='email' placeholder='Email' required/>
+          </div>
+          <div class='grid grid-2'>
+            <input name='phone' placeholder='Téléphone / WhatsApp'/>
+            <input name='country' placeholder='Pays / Ville'/>
+          </div>
+          <textarea name='brief' rows='5' placeholder='Produit(s), volumes, délais, certifications, budget…' required></textarea>
+          <div style='display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap'>
+            <label style='font-size:14px'><input type='checkbox' required/> <span data-i='audit_consent'>J’accepte d’être contacté par Trident Trust.</span></label>
+            <button class='btn' data-i='audit_send'>Envoyer la demande</button>
+          </div>
+          <p id='auditStatus' style='font-size:14px;color:#cbd5e1'></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id='about' style='padding:60px 0'>
+    <div class='container'>
+      <h2 style='font-size:26px;margin-bottom:10px' data-i='about_title'>Qui sommes-nous</h2>
+      <p data-i='about_p1'>Trident Trust relie l’Asie et l’Europe : nous sourçons, négocions et contrôlons la qualité chez des fabricants fiables. Basés à Hong Kong et Paris, nous sécurisons vos achats.</p>
+      <p data-i='about_p2'>Notre méthode en 13 étapes assure transparence, délais réalistes et conformité (CE/UKCA). Un interlocuteur unique, du brief à la livraison.</p>
+    </div>
+  </section>
+
+  <section id='faq' style='padding:10px 0 60px'>
+    <div class='container'>
+      <h2 style='font-size:26px;margin-bottom:14px' data-i='faq_title'>FAQ</h2>
+      <div class='grid'>
+        <div class='card'><b data-i='q1'>Proposez-vous des échantillons ?</b><br><span data-i='a1'>Oui, 1–3 par référence. 5–10 jours express.</span></div>
+        <div class='card'><b data-i='q2'>Faites-vous du branding (OEM/ODM) ?</b><br><span data-i='a2'>Oui : packaging, gravure, couleurs. MOQ selon produit.</span></div>
+        <div class='card'><b data-i='q3'>Quid de la conformité CE/UKCA ?</b><br><span data-i='a3'>On vérifie tests & marquage ; on peut organiser des tests tiers.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class='footer'>
+    <div class='container' style='display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px'>
+      <span>© <span id='year'></span> Trident Trust</span>
+      <span><a href='/legal' style='color:#94a3b8'>Mentions légales</a></span>
+    </div>
+  </footer>
+
+  <button id='chatBtn' class='chat-button'>💬</button>
+  <div id='chatWin' class='chat-window'>
+    <div class='chat-header'><strong>Trident Assistant</strong><button id='chatClose' style='background:transparent;color:#0a2540;border:none;font-size:18px'>✕</button></div>
+    <div id='chatLog' class='chat-body'></div>
+    <div style='display:flex;gap:8px;padding:10px;background:#0e1b2b;border-top:1px solid rgba(255,255,255,.1)'>
+      <input id='chatInput' placeholder='Posez votre question…' style='flex:1;padding:10px;border:1px solid rgba(255,255,255,.15);border-radius:12px'/>
+      <button id='chatSend' class='btn'>Envoyer</button>
+    </div>
+  </div>
+
+  <script>
+    const T = {
+      FR: { nav_services:'Services', nav_audit:'Audit', nav_about:'Qui sommes-nous', nav_faq:'FAQ',
+            badge:'HK ⇄ Paris', hero_title:'Sourcing & Trade premium entre Hong Kong et Paris',
+            hero_sub:'Du brief à la livraison : OEM/ODM, contrôle qualité, logistique, conformité CE/UKCA. Recevez un audit gratuit.',
+            cta_audit:'Démarrer l’audit', services_title:'Nos services',
+            s1_t:'Sourcing & négociation', s1_d:'Multi‑fournisseurs, RFPs, échantillons, prix optimisés.',
+            s2_t:'Qualité & conformité', s2_d:'QC, audits d’usine, CE/UKCA, PI.',
+            s3_t:'Logistique & douane', s3_d:'Express/Air/Mer, Incoterms, EORI & TVA.',
+            audit_title:'Free Sourcing Audit', audit_sub:'Décrivez votre besoin d’achat/sourcing et recevez une analyse par email.',
+            audit_consent:'J’accepte d’être contacté par Trident Trust.', audit_send:'Envoyer la demande',
+            about_title:'Qui sommes-nous',
+            about_p1:'Trident Trust relie l’Asie et l’Europe : nous sourçons, négocions et contrôlons la qualité chez des fabricants fiables. Basés à Hong Kong et Paris, nous sécurisons vos achats.',
+            about_p2:'Notre méthode en 13 étapes assure transparence, délais réalistes et conformité (CE/UKCA). Un interlocuteur unique, du brief à la livraison.',
+            faq_title:'FAQ', q1:'Proposez-vous des échantillons ?', a1:'Oui, 1–3 par référence. 5–10 jours express.',
+            q2:'Faites-vous du branding (OEM/ODM) ?', a2:'Oui : packaging, gravure, couleurs. MOQ selon produit.',
+            q3:'Quid de la conformité CE/UKCA ?', a3:'On vérifie tests & marquage ; on peut organiser des tests tiers.' },
+      EN: { nav_services:'Services', nav_audit:'Audit', nav_about:'About', nav_faq:'FAQ',
+            badge:'HK ⇄ Paris', hero_title:'Premium Sourcing & Trade between Hong Kong and Paris',
+            hero_sub:'From brief to delivery: OEM/ODM, quality control, logistics, CE/UKCA compliance. Get a free audit.',
+            cta_audit:'Start the audit', services_title:'Our services',
+            s1_t:'Sourcing & Negotiation', s1_d:'Multi‑supplier, RFPs, samples, optimized pricing.',
+            s2_t:'Quality & Compliance', s2_d:'QC, factory audits, CE/UKCA, IP.',
+            s3_t:'Logistics & Customs', s3_d:'Express/Air/Sea, Incoterms, EORI & VAT.',
+            audit_title:'Free Sourcing Audit', audit_sub:'Describe your need and receive an assessment by email.',
+            audit_consent:'I agree to be contacted by Trident Trust.', audit_send:'Send request',
+            about_title:'Who we are',
+            about_p1:'Trident Trust connects Asia and Europe: we source, negotiate and control quality with reliable manufacturers. Based in Hong Kong and Paris, we secure your purchasing.',
+            about_p2:'Our 13-step method ensures transparency, realistic lead times and compliance (CE/UKCA). One point of contact from brief to delivery.',
+            faq_title:'FAQ', q1:'Do you provide samples?', a1:'Yes, 1–3 per SKU. 5–10 days express.',
+            q2:'Can you do branding (OEM/ODM)?', a2:'Yes: packaging, engraving, colors. MOQ varies.',
+            q3:'How about CE/UKCA compliance?', a3:'We check tests & marking; we can arrange third‑party testing.' }
+    };
+    let LANG = 'FR';
+    function setLang(l){ LANG=l; document.documentElement.lang=(l==='FR'?'fr':'en');
+      document.querySelectorAll('[data-i]').forEach(el=>{ const k=el.getAttribute('data-i'); if(T[l][k]) el.textContent=T[l][k]; });
+    }
+    setLang('FR');
+    document.getElementById('lang').onclick=()=>setLang(LANG==='FR'?'EN':'FR');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Audit form -> SMTP API
+    const f = document.getElementById('auditForm');
+    f.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const fd = new FormData(f); const data = Object.fromEntries(fd.entries());
+      document.getElementById('auditStatus').textContent = (LANG==='FR'?'Envoi en cours…':'Sending…');
+      try{
+        const r = await fetch('/api/lead', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
+        if(!r.ok) throw new Error('Lead API error');
+        document.getElementById('auditStatus').textContent = (LANG==='FR'?'Merci ! Réponse sous 24h ouvrées.':'Thanks! We will reply within 1 business day.');
+        f.reset();
+      }catch(err){
+        document.getElementById('auditStatus').textContent = (LANG==='FR'?'Erreur d’envoi. Réessayez.':'Send error. Please retry.');
+      }
+    });
+
+    // Chatbot
+    const btn=document.getElementById('chatBtn'), win=document.getElementById('chatWin'), cls=document.getElementById('chatClose');
+    const log=document.getElementById('chatLog'), inp=document.getElementById('chatInput'), send=document.getElementById('chatSend');
+    function push(who,txt){ const el=document.createElement('div'); el.className='msg'+(who==='me'?' me':''); el.textContent=txt; log.appendChild(el); log.scrollTop=log.scrollHeight; }
+    function greet(){ push('bot', LANG==='FR'?'Bonjour ! Posez vos questions (FAQ, qui sommes‑nous, délais, OEM/ODM). Pour un audit complet, utilisez le formulaire.':'Hi! Ask about FAQ, who we are, lead times, OEM/ODM. For a full audit, use the form.'); }
+    async function talk(){ const t=inp.value.trim(); if(!t) return; push('me',t); inp.value=''; try{ const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:t,context:{lang:LANG}})}); const j=await r.json(); push('bot', j.reply || (LANG==='FR'?'Réponse indisponible.':'No reply.')); }catch(e){ push('bot', LANG==='FR'?'Service indisponible.':'Service unavailable.'); } }
+    btn.onclick=()=>{ win.style.display='block'; if(!log.dataset.g){ greet(); log.dataset.g=1; } };
+    cls.onclick=()=>{ win.style.display='none'; };
+    send.onclick=talk; inp.addEventListener('keydown', e=>{ if(e.key==='Enter') talk(); });
+  </script>
 </body>
 </html>
-
